@@ -2,7 +2,9 @@
 
 A demonstration of Phoenix's human annotation feature through a practical social media post generator application. The app allows users to generate social media posts and provide feedback, which is captured and analyzed using Phoenix's tracing capabilities.
 
-![Demo Screenshot](demo.png)
+Screenshot of the WebApp:
+![Demo Screenshot](UI.png)
+
 
 ## Features
 
@@ -20,6 +22,9 @@ Phoenix's human annotation feature allows you to:
 - Make data-driven improvements to your LLM applications
 - Create datasets of successful/unsuccessful generations
 - Share insights within your team
+
+Screenshot of how Phoenix dashboard looks like:
+![Phoenix Dashboard](Phoenix.png)
 
 ## Prerequisites
 
@@ -39,7 +44,7 @@ Phoenix's human annotation feature allows you to:
 2. Install dependencies:
 
     ```bash
-    pip install -r requirements.txt
+    pip install arize-phoenix openai openinference-instrumentation-openai gradio 'httpx<0.28'
     ```
 
 3. Set up environment variables:
@@ -120,7 +125,3 @@ For a detailed walkthrough, check out the [Tutorial notebook](Tutorial_notebook.
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

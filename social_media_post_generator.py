@@ -9,7 +9,7 @@ from openinference.semconv.trace import SpanAttributes
 
 # Configure the Phoenix tracer
 tracer_provider = register(
-    project_name="my-llm-app",
+    project_name="social-media-post-generator",
     endpoint="http://localhost:6006/v1/traces",
 )
 
@@ -69,7 +69,7 @@ def send_feedback_to_phoenix(span_id, feedback_type):
         }
 
         response = client.post(
-            "http://localhost:6006/v1/span_annotations?sync=false",
+            "http://localhost:6006/v1/span_annotations?sync=false", # https://app.phoenix.arize.com/v1/span_annotations?sync=false for cloud instance
             json=annotation_payload
         )
         return response.status_code == 200
@@ -82,7 +82,7 @@ def generate_post(description):
         attributes = {SpanAttributes.OPENINFERENCE_SPAN_KIND: "CHAIN"}
         with tracer.start_as_current_span("Social media post", attributes=attributes) as span:
             # Set input attribute
-            span.set_attribute(SpanAttributes.INPUT_VALUE, description)
+            span.set_attribute(SpanAttributes.INPUT_VALUE, PROMPT_TEMPLATE.format(product_desc=description))
             
             response = client.chat.completions.create(
                 model="gpt-4o",
