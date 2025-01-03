@@ -5,6 +5,14 @@ A demonstration of Phoenix's human annotation feature through a practical social
 Screenshot of the WebApp:
 ![Demo Screenshot](UI.png)
 
+Watch the Video Tutorial 🎥: <br>
+[![YouTube Tutorial](https://img.youtube.com/vi/5RCWtzBbq9E/0.jpg)](https://youtu.be/5RCWtzBbq9E)
+
+[Using Annotations to Collect Human Feedback from Your LLM App in Phoenix](https://www.youtube.com/watch?v=7eiQbz7_7H4)
+
+Read the Medium Post ✍️<br>
+[Enhance LLM Evaluation and Fine-Tuning with Phoenix Human Annotations](https://medium.com/p/9e10282ab687)
+
 
 ## Features
 
